@@ -70,9 +70,9 @@ function draw() {
    if(particle!=null){
      particle.display();
      if(particle.body.position.y>height){
-       if(particle.body.position.x<408){
+       if(particle.body.position.x<408 && particle.body.position.x>0){
       score+=500;
-       }else{
+       }else if(particle.body.position.x>408 && particle.body.position.x<width){
          score+=1000;
        }
       particle=null;
